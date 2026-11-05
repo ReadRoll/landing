@@ -17,6 +17,8 @@ Landing page for ReadRoll, live at https://readroll.xyz. Static Astro site.
 - Use pnpm for all JavaScript commands: `pnpm install`, `pnpm <script>`, `pnpm exec <binary>`.
 - Run the dev server in the background: `pnpm astro dev --background`; manage it with `pnpm astro dev stop|status|logs`.
 - Before Astro work, consult the relevant guide: [routing](https://docs.astro.build/en/guides/routing/), [components](https://docs.astro.build/en/basics/astro-components/), [styling](https://docs.astro.build/en/guides/styling/), [i18n](https://docs.astro.build/en/guides/internationalization/).
+- [tailwind](https://tailwindcss.com/docs/theme)
+- Tailwind CSS 4, configured CSS-first in `src/assets/app.css` (no `tailwind.config.js`).
 
 ## Code style
 

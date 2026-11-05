@@ -1,14 +1,16 @@
 {
-  "name": "readroll.xyz",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "7.4.4"
-  }
+    "name": "readroll.xyz",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@tailwindcss/vite": "4.3.2",
+        "astro": "7.4.4",
+        "tailwindcss": "4.3.2"
+    }
 }

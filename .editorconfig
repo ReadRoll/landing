@@ -12,9 +12,9 @@ trim_trailing_whitespace = true
 indent_style = space
 indent_size = 4
 
-[*.{json,yaml,yml}]
+[*.{json,yml,mjs}]
 indent_style = space
-indent_size = 2
+indent_size = 4
 
 [*.md]
 max_line_length = 80

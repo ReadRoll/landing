@@ -14,6 +14,7 @@ Static site, live at https://readroll.xyz
 ## Stack
 
 - Astro 7
+- Tailwind
 - pnpm
 - Docker
 
