@@ -1,43 +1,42 @@
-# Astro Starter Kit: Minimal
+<p align="center">
+  <img src="public/logo.svg" alt="ReadRoll logo" width="120">
+</p>
 
-```sh
-pnpm create astro@latest -- --template minimal
-```
+<h1 align="center">ReadRoll - Landing</h1>
+<p align="center"><strong>Your books and board games, all in one place.</strong></p>
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Overview
 
-## 🚀 Project Structure
+ReadRoll helps you keep track of your collection of books and board games. You can see what you own, plan what you want next and keep everything organized without a spreadsheet.
 
-Inside of your Astro project, you'll see the following folders and files:
+Static site, live at https://readroll.xyz
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Stack
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- Astro 7
+- pnpm
+- Docker
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Prerequisites
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Node.js
+- pnpm
+- Docker (optional)
 
-## 🧞 Commands
+## Setup (Local)
 
-All commands are run from the root of the project, from a terminal:
+- Clone the repository
+- Run `pnpm install`
+- Run `pnpm dev`
+- Landing: http://localhost:4321/
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+## Build
 
-## 👀 Want to learn more?
+- Run `pnpm build`
+- The static site is generated in `dist/`
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Docker
+
+- Run `docker build -t readroll-landing .`
+- Run `docker run -d -p 8080:8080 readroll-landing`
+- Landing: http://localhost:8080/
