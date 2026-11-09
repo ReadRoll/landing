@@ -3,8 +3,11 @@
 @theme {
     --color-*: initial;
     --color-primary: #e94f37;
-    --color-secondary: #07080a;
     --color-light: #fdfdff;
+    --color-dark: #07080a;
+    --color-dark-background: #23262b;
+    --color-gray-100: #e5e5e5;
+    --color-gray-200: #cacaca;
 
     --text-*: initial;
     --text-xs: 0.75rem;
@@ -15,6 +18,15 @@
     --text-lg: 1.5rem;
     --text-xl: 1.75rem;
     --text-xxl: 2rem;
+
+    --spacing: 0.25rem;
+
+    --radius-*: initial;
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.25rem;
 }
 
 @theme inline {
