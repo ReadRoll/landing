@@ -10,6 +10,7 @@ Landing page for ReadRoll, live at https://readroll.xyz. Static Astro site.
 ## Documentation
 
 - All the documentation lives in docs/.
+- Docs record key concepts and decisions; file names, functions, types and code snippets stay in the code.
 
 ## Commits
 
@@ -27,3 +28,6 @@ Landing page for ReadRoll, live at https://readroll.xyz. Static Astro site.
 ## Code style
 
 - Prefer named intermediate variables and small methods over nested expressions (for example a ternary inside `map` inside a spread).
+- Type component props with `type Props = { … }`.
+- Pages pass their page-specific data (title, alternates, …) to `Layout` explicitly; shared components derive only site-wide values.
+- Write explicit files over dynamic routes or generated paths when the duplication is a thin wrapper.
