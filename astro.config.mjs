@@ -1,9 +1,15 @@
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig, fontProviders } from "astro/config";
+import { defaultLocale, locales } from "@/i18n/locales.ts";
 
 export default defineConfig({
     site: "https://readroll.xyz",
     trailingSlash: "ignore",
+    i18n: {
+        defaultLocale,
+        locales: [...locales],
+        routing: { prefixDefaultLocale: false },
+    },
     vite: {
         plugins: [tailwindcss()],
     },
