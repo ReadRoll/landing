@@ -1,0 +1,11 @@
+{
+    "site": {
+        "meta_description": "ReadRoll organise vos livres et jeux de société. Scannez les codes-barres, créez votre liste d'envies et suivez toute votre collection, sans tableur."
+    },
+    "landing": {
+        "page_title": "ReadRoll – Vos livres et jeux de société, bien rangés",
+        "hero": {
+            "title": "ReadRoll fr"
+        }
+    }
+}
