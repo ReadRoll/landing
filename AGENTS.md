@@ -7,6 +7,10 @@ Landing page for ReadRoll, live at https://readroll.xyz. Static Astro site.
 - When I refuse an edit and redirect, propose a general rule for "Code style" and add it once I confirm.
 </critical>
 
+## Documentation
+
+- All the documentation lives in docs/.
+
 ## Commits
 
 - Conventional Commits: `type(scope): short description`, subject in English.
