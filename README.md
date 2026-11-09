@@ -3,11 +3,11 @@
 </p>
 
 <h1 align="center">ReadRoll - Landing</h1>
-<p align="center"><strong>Your books and board games, all in one place.</strong></p>
+<p align="center"><strong>Read it. Play it. Track it. For readers and players.</strong></p>
 
 ## Overview
 
-ReadRoll helps you keep track of your collection of books and board games. You can see what you own, plan what you want next and keep everything organized without a spreadsheet.
+ReadRoll keeps your books and board games organized. Know what’s on your shelves, plan your next favorite, and say goodbye to spreadsheets.
 
 Static site, live at https://readroll.xyz
 
