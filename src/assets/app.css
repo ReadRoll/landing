@@ -8,6 +8,7 @@
     --color-dark-background: #23262b;
     --color-gray-100: #e5e5e5;
     --color-gray-200: #cacaca;
+    --color-gray-300: #6a7282;
 
     --text-*: initial;
     --text-xs: 0.75rem;
@@ -17,7 +18,7 @@
     --text-md: 1.25rem;
     --text-lg: 1.5rem;
     --text-xl: 1.75rem;
-    --text-xxl: 2rem;
+    --text-2xl: 2rem;
 
     --spacing: 0.25rem;
 
@@ -44,5 +45,26 @@
     h5,
     h6 {
         @apply font-title;
+    }
+}
+
+@utility legal-prose {
+    h2 {
+        @apply font-text text-lg font-semibold mb-2 mt-8;
+    }
+    h2:first-child {
+        @apply mt-0;
+    }
+    h3 {
+        @apply font-text text-md font-semibold mt-4 mb-2 underline;
+    }
+    p {
+        @apply leading-relaxed text-sm mb-1;
+    }
+    a {
+        @apply text-primary text-sm mb-1 underline;
+    }
+    ul {
+        @apply list-disc pl-5 space-y-1 text-sm mb-1;
     }
 }

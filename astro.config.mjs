@@ -1,6 +1,18 @@
 import tailwindcss from "@tailwindcss/vite";
+import { satteri } from "@astrojs/markdown-satteri";
 import { defineConfig, fontProviders } from "astro/config";
 import { defaultLocale, locales } from "@/i18n/locales.ts";
+import { markdownRouteLinks } from "@/lib/markdownRouteLinks.ts";
+
+const watchI18nFiles = {
+    name: "watch-i18n-files",
+    hooks: {
+        "astro:config:setup": ({ addWatchFile }) => {
+            addWatchFile(new URL("./src/i18n/routes.ts", import.meta.url));
+            addWatchFile(new URL("./src/i18n/locales.ts", import.meta.url));
+        },
+    },
+};
 
 export default defineConfig({
     site: "https://readroll.xyz",
@@ -9,6 +21,12 @@ export default defineConfig({
         defaultLocale,
         locales: [...locales],
         routing: { prefixDefaultLocale: false },
+    },
+    integrations: [watchI18nFiles],
+    markdown: {
+        processor: satteri({
+            mdastPlugins: [markdownRouteLinks],
+        }),
     },
     vite: {
         plugins: [tailwindcss()],
