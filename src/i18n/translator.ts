@@ -6,6 +6,6 @@ export type Dictionary = typeof en;
 
 const dictionaries: Record<Locale, Dictionary> = { en, fr };
 
-export function useTranslations(locale: Locale): Dictionary {
+export function getDictionary(locale: Locale): Dictionary {
     return dictionaries[locale];
 }
