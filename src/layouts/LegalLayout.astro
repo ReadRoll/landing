@@ -1,0 +1,26 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import LegalHeader from "@/components/legal/LegalHeader.astro";
+import type { RouteKey } from "@/i18n/routes";
+
+type Props = {
+    metaTitle: string;
+    route: RouteKey;
+    title: string;
+    updatedAt: Date;
+    homeHref: string;
+};
+
+const { metaTitle, route, title, updatedAt, homeHref } = Astro.props;
+---
+
+<Layout title={metaTitle} route={route}>
+    <main class="bg-light min-h-dvh flex flex-col px-4 py-10">
+        <div class="flex flex-col gap-8 max-w-4xl mx-auto md:mt-30">
+            <LegalHeader title={title} updatedAt={updatedAt} homeHref={homeHref} />
+            <article class="legal-prose">
+                <slot />
+            </article>
+        </div>
+    </main>
+</Layout>

@@ -1,0 +1,38 @@
+---
+title: Legal notice
+updatedAt: 2026-10-08
+---
+
+## Publisher
+
+The web application is published for a personal and non-commercial purpose by : **[Dylan BERNARD](https://dylan-bernard.com/)**
+
+In accordance with the provisions applicable to the French Law No. 2004-575 of June 21, 2004 for confidence in the digital economy (LCEN), the personal information relating to the publisher which are not intended to be published can, when the legal conditions are met, be communicated to the host and preserved by it in accordance with its legal obligations.
+
+## Host
+
+The website is hosted by: **Hostinger International Ltd**
+
+**Address:** 61 Lordou Vironos Street, 6023 Larnaca, Cyprus
+
+**Website:** <https://www.hostinger.com>
+
+**Contact:** <https://www.hostinger.com/fr/contact>
+
+## Contact
+
+For any question concerning the application, its operation or the present legal notices, you can contact the publisher at the following address : <contact@readroll.xyz>
+
+## Data sources
+
+The bibliographic information offered when scanning an ISBN comes from open datasets, downloaded and then imported into the application.
+
+- **Open Library** (Internet Archive) — public dumps: <https://openlibrary.org/developers/dumps> — public domain (CC0).
+- **Nudger Open Data**, ISBN database — file downloaded from <https://nudger.fr/opendata/isbn> — Open Database License (ODbL): <https://opendatacommons.org/licenses/odbl/1-0/>
+
+## Additional information
+
+For more information concerning the use of the application and the processing of personal data, please consult :
+
+- [Privacy policy](route:privacy)
+- [Terms of service](route:terms)
