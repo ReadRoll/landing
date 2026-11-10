@@ -1,15 +1,14 @@
 ---
-import Styles from "@/components/core/Styles.astro";
-import Head from "@/components/core/Head.astro";
-import { defaultLocale } from "@/i18n/translator";
+import Styles from "@/components/head/Styles.astro";
+import Head from "@/components/head/Head.astro";
 import type { ComponentProps } from "astro/types";
 
 type Props = ComponentProps<typeof Head>;
-const lang = Astro.currentLocale ?? defaultLocale;
+const { locale } = Astro.locals;
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={locale}>
     <head>
         <Head {...Astro.props} />
         <Styles />

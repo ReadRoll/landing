@@ -1,18 +1,20 @@
 ---
-import { useTranslations, defaultLocale } from "@/i18n/translator";
-import { getAlternateLinks, type HeadAlternates } from "@/i18n/meta";
+import { getAlternateLinks } from "@/i18n/meta";
+import { routes, type RouteKey } from "@/i18n/routes";
 
 type Props = {
     title: string;
+    withSiteName?: boolean;
     type?: "website" | "article";
-    headAlternates?: HeadAlternates;
+    route?: RouteKey;
 };
 
-const { title, type = "website", headAlternates } = Astro.props;
+const { locale, t } = Astro.locals;
+const { title, withSiteName = true, type = "website", route } = Astro.props;
 
 // Page
-const locale = Astro.currentLocale ?? defaultLocale;
-const t = useTranslations(locale);
+const siteName = "ReadRoll";
+const documentTitle = withSiteName ? `${title} | ${siteName}` : title;
 const description = t.site.meta_description;
 
 // Favicons
@@ -23,8 +25,8 @@ const favicon = {
     iconico: "/favicons/favicon.ico",
 };
 
-// Language alternates (none when the page passes no headAlternates, e.g. 404)
-const alternateLinks = getAlternateLinks(headAlternates, Astro.site);
+// Language alternates (none when the page passes no route, e.g. 404)
+const alternateLinks = route ? getAlternateLinks(routes[route], Astro.site) : [];
 
 // Open Graph
 const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
@@ -35,7 +37,7 @@ const og = {
     type,
     url: pageUrl,
     image: imageUrl,
-    siteName: "ReadRoll",
+    siteName,
 };
 ---
 
@@ -45,7 +47,7 @@ const og = {
 <meta name="generator" content={Astro.generator} />
 
 {/* Page */}
-<title>{title}</title>
+<title>{documentTitle}</title>
 <meta name="description" content={description} />
 
 {/* Favicons */}

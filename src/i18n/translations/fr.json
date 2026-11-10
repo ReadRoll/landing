@@ -7,5 +7,10 @@
         "hero": {
             "title": "ReadRoll fr"
         }
+    },
+    "legal": {
+        "back_home": "Retour à l'accueil",
+        "updated_on": "Dernière mise à jour le",
+        "legal_mention_title": "Mentions légales"
     }
 }

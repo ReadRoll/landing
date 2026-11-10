@@ -1,17 +1,14 @@
 ---
-import { useTranslations } from "@/i18n/translator";
-import type { HeadAlternates } from "@/i18n/meta";
 import Layout from "@/layouts/Layout.astro";
 
-const t = useTranslations(Astro.currentLocale);
+const { t, paths } = Astro.locals;
 const metaTitle = t.landing.page_title;
-const headAlternates: HeadAlternates = {
-    en: "/",
-    fr: "/fr/",
-    "x-default": "/",
-};
 ---
 
-<Layout title={metaTitle} headAlternates={headAlternates}>
+<Layout title={metaTitle} route="home" withSiteName={false}>
     <h1 class="text-xl text-primary">{t.landing.hero.title}</h1>
+
+    <a href={paths.legal}>{t.legal.legal_mention_title}</a>
+    <a href={paths.privacy}>Privacy</a>
+    <a href={paths.terms}>TOS</a>
 </Layout>
