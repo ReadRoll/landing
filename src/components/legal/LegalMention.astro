@@ -2,7 +2,6 @@
 import * as en from "@/content/legal/en/LegalMention.md";
 import * as fr from "@/content/legal/fr/LegalMention.md";
 import type { Locale } from "@/i18n/locales";
-import { getRoutePath } from "@/i18n/routes";
 import LegalLayout from "@/layouts/LegalLayout.astro";
 
 const contents: Record<Locale, typeof en> = { en, fr };
@@ -10,9 +9,8 @@ const contents: Record<Locale, typeof en> = { en, fr };
 const { locale, t } = Astro.locals;
 const { Content, frontmatter } = contents[locale];
 const updatedAt = new Date(frontmatter.updatedAt);
-const homeHref = getRoutePath("home", locale);
 ---
 
-<LegalLayout metaTitle={t.legal.legal_mention_title} route="legal" title={frontmatter.title} updatedAt={updatedAt} homeHref={homeHref}>
+<LegalLayout metaTitle={t.legal.legal_mention_title} route="legal" title={frontmatter.title} updatedAt={updatedAt}>
     <Content />
 </LegalLayout>

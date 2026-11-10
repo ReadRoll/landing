@@ -1,0 +1,85 @@
+---
+title: Politique de confidentialité
+updatedAt: 2026-09-16
+---
+
+Cette politique de confidentialité explique quelles données personnelles sont collectées lorsque vous utilisez l'application, pourquoi elles sont utilisées, comment elles sont conservées et quels sont vos droits.
+
+Responsable du traitement : Dylan BERNARD (<contact@readroll.xyz>)
+
+## Données collectées et utilisation
+
+Lorsque vous utilisez l'application, certaines données peuvent être collectées ou enregistrées afin de permettre son fonctionnement.
+
+Selon les fonctionnalités utilisées, cela peut notamment inclure :
+
+- Données de compte : e-mail, nom, mot de passe (stocké de façon hashée), langue
+- Contenus que vous créez : livres, collections, tags
+- E-mails nécessaires au service (réinitialisation du mot de passe)
+- Cookies techniques (session, sécurité)
+
+Ces données sont utilisées uniquement pour fournir les fonctionnalités de l'application.
+
+Le traitement de vos données de compte, de vos contenus et des e-mails nécessaires au service (par exemple la réinitialisation du mot de passe) est fondé sur l'exécution du contrat, c'est-à-dire la fourniture de l'application.
+
+Le traitement des cookies techniques, des mesures de sécurité et des éventuels journaux d'hébergement est fondé sur l'intérêt légitime de l'éditeur à faire fonctionner et sécuriser l'application.
+
+L'application est personnelle et non commerciale. Vos données ne sont pas vendues et ne sont pas utilisées à des fins de publicité ciblée ou de profilage commercial.
+
+## Durée de stockage et droits de vos données
+
+Vos données sont conservées aussi longtemps que nécessaire pour permettre le fonctionnement de votre compte et de l'application.
+
+Les sauvegardes techniques peuvent être conservées pendant une durée limitée avant leur suppression automatique.
+
+Conformément au règlement (UE) 2016/679 (RGPD) et à la loi Informatique et Libertés, vous disposez notamment des droits suivants :
+
+- D'accès à vos données
+- De rectification de vos données
+- D'effacement de vos données
+- De limitation du traitement
+- D'opposition à certains traitements
+- De portabilité de vos données lorsque ce droit est applicable
+
+Pour exercer vos droits ou pour toute question concernant vos données personnelles, vous pouvez contacter <contact@readroll.xyz>.
+
+Vous pouvez également introduire une réclamation auprès de la CNIL (<https://cnil.fr>).
+
+## Sauvegardes
+
+Afin d'assurer la continuité du service et de permettre la restauration des données en cas d'incident, des copies de sauvegarde peuvent être réalisées et stockées sur une infrastructure de stockage fournie par Cloudflare (R2).
+
+Les données stockées sur R2 bénéficient du chiffrement des données au repos mis en œuvre par Cloudflare. Les sauvegardes sont conservées pendant une durée maximale de 7 jours, puis supprimées automatiquement.
+
+Les sauvegardes peuvent contenir les mêmes données personnelles que celles présentes dans les données sauvegardées du service. Elles sont utilisées exclusivement à des fins de restauration et de continuité du service.
+
+## Transmission de vos données personnelles
+
+Vos données sont utilisées dans le cadre du fonctionnement de l'application et peuvent être stockées sur l'infrastructure de son hébergeur.
+
+L'application est hébergée par **Hostinger International Ltd.**
+
+Les données peuvent être accessibles par l'éditeur ou par des prestataires techniques uniquement lorsque cela est nécessaire au fonctionnement, à la maintenance, à la sécurité ou à l'hébergement de l'application.
+
+Aucune donnée n'est transmise à des fins publicitaires ou commerciales.
+
+## Cookies
+
+L'application utilise uniquement des cookies ou des technologies similaires nécessaires à son bon fonctionnement.
+
+## Informations supplémentaires
+
+### Sécurité
+
+Des mesures techniques raisonnables sont mises en œuvre afin de protéger vos données contre les accès non autorisés, la perte, l'altération ou la divulgation.
+
+Cependant, aucun service en ligne ne peut garantir une sécurité absolue.
+
+### Mise à jour de la politique de confidentialité
+
+Cette politique de confidentialité peut être mise à jour lorsque cela est nécessaire, notamment en cas d'évolution de l'application, de ses fonctionnalités ou de la réglementation applicable.
+
+### Autres
+
+- [Mentions légales](route:legal)
+- [Conditions d'utilisation](route:terms)

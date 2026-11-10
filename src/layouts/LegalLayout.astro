@@ -8,16 +8,15 @@ type Props = {
     route: RouteKey;
     title: string;
     updatedAt: Date;
-    homeHref: string;
 };
 
-const { metaTitle, route, title, updatedAt, homeHref } = Astro.props;
+const { metaTitle, route, title, updatedAt } = Astro.props;
 ---
 
 <Layout title={metaTitle} route={route}>
     <main class="bg-light min-h-dvh flex flex-col px-4 py-10">
         <div class="flex flex-col gap-8 max-w-4xl mx-auto md:mt-30">
-            <LegalHeader title={title} updatedAt={updatedAt} homeHref={homeHref} />
+            <LegalHeader title={title} updatedAt={updatedAt} />
             <article class="legal-prose">
                 <slot />
             </article>
