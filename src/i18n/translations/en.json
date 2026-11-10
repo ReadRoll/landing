@@ -11,6 +11,8 @@
     "legal": {
         "back_home": "Back to home",
         "updated_on": "Last update on",
-        "legal_mention_title": "Legal notice"
+        "legal_mention_title": "Legal notice",
+        "privacy_title": "Privacy policy",
+        "terms_title": "Terms of service"
     }
 }

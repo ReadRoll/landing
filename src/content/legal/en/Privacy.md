@@ -1,0 +1,85 @@
+---
+title: Privacy policy
+updatedAt: 2026-09-16
+---
+
+This privacy policy explains which personal data is collected when you use the application, why they are used, how they are stored and your rights.
+
+Data controller: Dylan BERNARD (<contact@readroll.xyz>)
+
+## Collected data and usage
+
+When you use the application, some data may be collected or stored to allow its operation.
+
+Depending on the features used, this may include:
+
+- Account data: email, name, password (stored in a hashed form), language
+- Contents you create: books, collections, tags
+- Required emails for service (password reset)
+- Technical cookies (session, security)
+
+These data are used only to provide the features of the application.
+
+The processing of your account data, your contents and the required emails for service (for example password reset) is based on the performance of a contract, i.e. the provision of the application.
+
+The processing of technical cookies, security measures and possible hosting logs is based on the legitimate interest of the controller to operate and secure the application.
+
+The application is personal and non-commercial. Your data are not sold and are not used for targeted advertising or commercial profiling.
+
+## Data storage duration and your rights
+
+Your data is kept as long as necessary to allow the operation of your account and the application.
+
+Technical backups may be kept for a limited period before automatic deletion.
+
+In accordance with Regulation (EU) 2016/679 (GDPR) and French Data Protection Act (loi Informatique et Libertés), you have the following rights:
+
+- Access to your data
+- Rectification of your data
+- Erasure of your data
+- Restriction of processing
+- Objection to certain processing
+- Portability of your data when this right is applicable
+
+To exercise your rights or for any question concerning your personal data, you can contact <contact@readroll.xyz>.
+
+You can also lodge a complaint with the French Data Protection Authority (CNIL) (<https://cnil.fr>).
+
+## Backups
+
+In order to ensure the continuity of the service and to allow the restoration of data in case of incident, backups may be made and stored on a storage infrastructure provided by Cloudflare (R2).
+
+The data stored on R2 benefits from the data encryption at rest implemented by Cloudflare. Backups are kept for a maximum period of 7 days, then automatically deleted.
+
+The backups may contain the same personal data as the data stored in the service backup. They are used exclusively for restoration and continuity of the service.
+
+## Transmission of your personal data
+
+Your data is used in the context of the operation of the application and may be stored on the infrastructure of its host.
+
+The application is hosted by **Hostinger International Ltd.**
+
+The data may be accessible by the controller or by technical providers only when it is necessary for the operation, maintenance, security or hosting of the application.
+
+No data is transmitted for advertising or commercial purposes.
+
+## Cookies
+
+The application uses only cookies or similar technologies necessary for its proper functioning.
+
+## Additional information
+
+### Security
+
+Reasonable technical measures are implemented to protect your data against unauthorized access, loss, alteration or disclosure.
+
+However, no online service can guarantee absolute security.
+
+### Update of the privacy policy
+
+This privacy policy may be updated when it is necessary, particularly in case of evolution of the application, its features or the applicable regulation.
+
+### Other
+
+- [Legal notice](route:legal)
+- [Terms of service](route:terms)

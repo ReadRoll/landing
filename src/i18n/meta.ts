@@ -1,4 +1,4 @@
-import { defaultLocale, type Locale } from "@/i18n/locales";
+import { defaultLocale } from "@/i18n/locales";
 import type { LocalizedPath } from "@/i18n/routes";
 
 export type AlternateLink = { hreflang: string; href: string };

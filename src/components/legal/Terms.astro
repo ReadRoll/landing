@@ -1,0 +1,16 @@
+---
+import * as en from "@/content/legal/en/Terms.md";
+import * as fr from "@/content/legal/fr/Terms.md";
+import type { Locale } from "@/i18n/locales";
+import LegalLayout from "@/layouts/LegalLayout.astro";
+
+const contents: Record<Locale, typeof en> = { en, fr };
+
+const { locale, t } = Astro.locals;
+const { Content, frontmatter } = contents[locale];
+const updatedAt = new Date(frontmatter.updatedAt);
+---
+
+<LegalLayout metaTitle={t.legal.terms_title} route="terms" title={frontmatter.title} updatedAt={updatedAt}>
+    <Content />
+</LegalLayout>

@@ -11,10 +11,6 @@ export const routes = {
     terms: { en: "/terms-of-service", fr: "/fr/conditions-utilisation" },
 } satisfies Record<string, LocalizedPath>;
 
-export function getRoutePath(key: RouteKey, locale: Locale): string {
-    return routes[key][locale];
-}
-
 export function getLocalizedRoutes(locale: Locale): LocalizedRoutes {
     const entries = Object.entries(routes).map(([key, paths]) => [key, paths[locale]]);
     return Object.fromEntries(entries) as LocalizedRoutes;
