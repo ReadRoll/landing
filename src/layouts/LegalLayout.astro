@@ -2,15 +2,19 @@
 import Layout from "@/layouts/Layout.astro";
 import LegalHeader from "@/components/legal/LegalHeader.astro";
 import type { RouteKey } from "@/i18n/routes";
+import ProseLink from "@/components/markdown/ProseLink.astro";
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 
 type Props = {
     metaTitle: string;
     route: RouteKey;
     title: string;
     updatedAt: Date;
+    content: AstroComponentFactory;
 };
 
-const { metaTitle, route, title, updatedAt } = Astro.props;
+const { metaTitle, route, title, updatedAt, content: Content } = Astro.props;
+const mdxComponents = { a: ProseLink };
 ---
 
 <Layout title={metaTitle} route={route}>
@@ -18,7 +22,7 @@ const { metaTitle, route, title, updatedAt } = Astro.props;
         <div class="flex flex-col gap-8 max-w-4xl mx-auto md:mt-30">
             <LegalHeader title={title} updatedAt={updatedAt} />
             <article class="legal-prose">
-                <slot />
+                <Content components={mdxComponents} />
             </article>
         </div>
     </main>

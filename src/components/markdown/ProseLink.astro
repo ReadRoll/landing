@@ -1,0 +1,29 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { isRouteKey } from "@/i18n/routes";
+
+type Props = HTMLAttributes<"a">;
+
+const routePrefix = "route:";
+const { href, ...attributes } = Astro.props;
+const { paths } = Astro.locals;
+
+function resolveHref(rawHref: string): string {
+    if (!rawHref.startsWith(routePrefix)) {
+        return rawHref;
+    }
+    const key = rawHref.slice(routePrefix.length);
+    if (!isRouteKey(key)) {
+        throw new Error(`Unknown route "${key}" in a Markdown link`);
+    }
+    return paths[key];
+}
+
+const resolvedHref = resolveHref(String(href ?? ""));
+const isExternal = resolvedHref.startsWith("http");
+const externalAttributes = isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {};
+---
+
+<a href={resolvedHref} {...attributes} {...externalAttributes}>
+    <slot />
+</a>

@@ -1,8 +1,9 @@
 ---
-import * as en from "@/content/legal/en/LegalMention.md";
-import * as fr from "@/content/legal/fr/LegalMention.md";
+import * as en from "@/content/legal/en/LegalMention.mdx";
+import * as fr from "@/content/legal/fr/LegalMention.mdx";
 import type { Locale } from "@/i18n/locales";
 import LegalLayout from "@/layouts/LegalLayout.astro";
+import ProseLink from "@/components/markdown/ProseLink.astro";
 
 const contents: Record<Locale, typeof en> = { en, fr };
 
@@ -11,6 +12,4 @@ const { Content, frontmatter } = contents[locale];
 const updatedAt = new Date(frontmatter.updatedAt);
 ---
 
-<LegalLayout metaTitle={t.legal.legal_mention_title} route="legal" title={frontmatter.title} updatedAt={updatedAt}>
-    <Content />
-</LegalLayout>
+<LegalLayout metaTitle={t.legal.legal_mention_title} route="legal" title={frontmatter.title} updatedAt={updatedAt} content={Content} />
