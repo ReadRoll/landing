@@ -1,6 +1,6 @@
 ---
-import * as en from "@/content/legal/en/Privacy.md";
-import * as fr from "@/content/legal/fr/Privacy.md";
+import * as en from "@/content/legal/en/Privacy.mdx";
+import * as fr from "@/content/legal/fr/Privacy.mdx";
 import type { Locale } from "@/i18n/locales";
 import LegalLayout from "@/layouts/LegalLayout.astro";
 
@@ -11,6 +11,4 @@ const { Content, frontmatter } = contents[locale];
 const updatedAt = new Date(frontmatter.updatedAt);
 ---
 
-<LegalLayout metaTitle={t.legal.privacy_title} route="privacy" title={frontmatter.title} updatedAt={updatedAt}>
-    <Content />
-</LegalLayout>
+<LegalLayout metaTitle={t.legal.privacy_title} route="privacy" title={frontmatter.title} updatedAt={updatedAt} content={Content} />
