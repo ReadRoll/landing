@@ -1,10 +1,15 @@
 import tailwindcss from "@tailwindcss/vite";
-import { defineConfig, fontProviders } from "astro/config";
+import { defineConfig, envField, fontProviders } from "astro/config";
 import { defaultLocale, locales } from "@/i18n/locales.ts";
 import mdx from "@astrojs/mdx";
 
 export default defineConfig({
     site: "https://readroll.xyz",
+    env: {
+        schema: {
+            APP_SIGN_IN_URL: envField.string({ context: "client", access: "public", url: true }),
+        },
+    },
     trailingSlash: "ignore",
     i18n: {
         defaultLocale,
