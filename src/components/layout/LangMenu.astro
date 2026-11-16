@@ -1,0 +1,50 @@
+---
+import Button from "@/components/ui/action/Button.astro";
+import LangIcon from "@/assets/icons/lang.svg";
+import { routes, type RouteKey } from "@/i18n/routes";
+import { locales } from "@/i18n/locales";
+
+const { locale, t } = Astro.locals;
+
+// Props
+type Props = {
+    id: string;
+    route?: RouteKey;
+};
+const { id, route = "home" } = Astro.props;
+
+// Langs
+const anchorName = `--${id}`;
+const options = locales.map((optionLocale) => ({
+    locale: optionLocale,
+    name: t.lang[optionLocale],
+    href: routes[route][optionLocale],
+    current: optionLocale === locale ? ("page" as const) : undefined,
+}));
+---
+
+<Button popovertarget={id} style={`anchor-name: ${anchorName}`}>
+    <LangIcon slot="icon" />
+    {t.site.navigation.lang}
+</Button>
+
+<ul
+    id={id}
+    popover
+    class="popover-transition mt-2 min-w-32 top-[anchor(bottom)] left-[anchor(left)] right-[anchor(right)] rounded-md border border-gray-100 bg-light p-1 text-sm"
+    style={`position-anchor: ${anchorName}`}
+>
+    {options.map((option) => (
+        <li>
+            <a
+                class="block rounded-sm px-3 py-2 transition outline-none hover:bg-gray-100 focus-visible:bg-gray-100 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset aria-[current=page]:font-semibold aria-[current=page]:bg-gray-100/30"
+                href={option.href}
+                hreflang={option.locale}
+                lang={option.locale}
+                aria-current={option.current}
+            >
+                {option.name}
+            </a>
+        </li>
+    ))}
+</ul>

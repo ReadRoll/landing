@@ -1,12 +1,24 @@
 {
     "site": {
-        "meta_description": "ReadRoll keeps your books and board games organized. Scan barcodes, build your wishlist, and track your whole collection, no spreadsheet needed."
+        "meta_description": "ReadRoll keeps your books and board games organized. Scan barcodes, build your wishlist, and track your whole collection, no spreadsheet needed.",
+        "navigation": {
+            "menu": "Menu",
+            "features": "Features",
+            "changelogs": "Changelog",
+            "faq": "FAQ",
+            "lang": "Language",
+            "sign_in": "Log in"
+        }
     },
     "landing": {
         "page_title": "ReadRoll – Your books and board games, organized",
         "hero": {
             "title": "ReadRoll en"
         }
+    },
+    "lang": {
+        "fr": "French",
+        "en": "English"
     },
     "legal": {
         "back_home": "Back to home",

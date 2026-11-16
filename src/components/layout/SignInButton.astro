@@ -1,0 +1,17 @@
+---
+import { APP_SIGN_IN_URL } from "astro:env/client";
+import Button from "@/components/ui/action/Button.astro";
+import SignInIcon from "@/assets/icons/sign-in.svg";
+import type { ComponentProps } from "astro/types";
+
+const { t } = Astro.locals;
+
+// Props
+type Props = { variant?: ComponentProps<typeof Button>["variant"] };
+const { variant = "primary" } = Astro.props;
+---
+
+<Button href={APP_SIGN_IN_URL} variant={variant}>
+    <SignInIcon slot="icon" />
+    {t.site.navigation.sign_in}
+</Button>
