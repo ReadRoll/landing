@@ -7,7 +7,7 @@
 
 ## Overview
 
-ReadRoll keeps your books and board games organized. Know what’s on your shelves, plan your next favorite, and say goodbye to spreadsheets.
+Keeps your books and board games organized. Know what’s on your shelves, plan your next favorite, and say goodbye to spreadsheets.
 
 Static site, live at https://readroll.xyz
 
