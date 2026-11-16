@@ -1,0 +1,13 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Props = { href: string } & HTMLAttributes<"a">;
+
+const { class: className, ...props } = Astro.props;
+
+const classes = ["transition hover:text-primary", className];
+---
+
+<a class:list={classes} {...props}>
+    <slot />
+</a>
