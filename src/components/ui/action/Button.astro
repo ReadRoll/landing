@@ -14,7 +14,7 @@ const Tag = props.href !== undefined ? "a" : "button";
 const attributes = props as Record<string, unknown>;
 
 // Variants
-const classList = "text-sm/[1.1875rem] cursor-pointer flex justify-center items-center gap-2 border rounded-md px-6 py-3 transition active:scale-[0.98]";
+const classList = "text-sm/[1.1875rem] cursor-pointer flex justify-center items-center gap-2 border rounded-md px-4 py-3 md:px-6 transition active:scale-[0.98]";
 const variantClassMapper = {
     primary: "bg-primary border-primary text-light hover:bg-primary-hover hover:border-primary-hover",
     light: "bg-light border-gray-100 hover:border-gray-200 hover:bg-gray-100/40",

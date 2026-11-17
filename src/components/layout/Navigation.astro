@@ -4,6 +4,7 @@ import LangMenu from "@/components/layout/LangMenu.astro";
 import type { RouteKey } from "@/i18n/routes";
 import NavigationMobileMenu from "@/components/layout/NavigationMobileMenu.astro";
 import SignInButton from "@/components/layout/SignInButton.astro";
+import { sectionIds } from "@/components/landing/sections";
 
 const { t, paths } = Astro.locals;
 
@@ -13,9 +14,9 @@ const { route } = Astro.props;
 
 // Links
 const navigationLinks = [
-    { label: t.site.navigation.features, href: `${paths.home}#features` },
-    { label: t.site.navigation.changelogs, href: `${paths.home}#changelogs` },
-    { label: t.site.navigation.faq, href: `${paths.home}#faq` },
+    { label: t.site.navigation.features, href: `${paths.home}#${sectionIds.features}` },
+    { label: t.site.navigation.changelogs, href: `${paths.home}#${sectionIds.changelogs}` },
+    { label: t.site.navigation.faq, href: `${paths.home}#${sectionIds.faq}` },
 ];
 ---
 
