@@ -8,6 +8,10 @@
             "faq": "FAQ",
             "lang": "Language",
             "sign_in": "Log in"
+        },
+        "footer": {
+            "legal": "Legal mentions",
+            "sitemap": "Sitemap"
         }
     },
     "landing": {

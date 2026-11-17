@@ -3,6 +3,7 @@ import Button from "@/components/ui/action/Button.astro";
 import LangIcon from "@/assets/icons/lang.svg";
 import { routes, type RouteKey } from "@/i18n/routes";
 import { locales } from "@/i18n/locales";
+import type { ComponentProps } from "astro/types";
 
 const { locale, t } = Astro.locals;
 
@@ -10,8 +11,9 @@ const { locale, t } = Astro.locals;
 type Props = {
     id: string;
     route?: RouteKey;
+    variant?: ComponentProps<typeof Button>["variant"];
 };
-const { id, route = "home" } = Astro.props;
+const { id, route = "home", variant } = Astro.props;
 
 // Langs
 const anchorName = `--${id}`;
@@ -23,7 +25,7 @@ const options = locales.map((optionLocale) => ({
 }));
 ---
 
-<Button popovertarget={id} style={`anchor-name: ${anchorName}`}>
+<Button popovertarget={id} variant={variant} style={`anchor-name: ${anchorName}`}>
     <LangIcon slot="icon" />
     {t.site.navigation.lang}
 </Button>
@@ -31,7 +33,7 @@ const options = locales.map((optionLocale) => ({
 <ul
     id={id}
     popover
-    class="popover-transition mt-2 min-w-32 top-[anchor(bottom)] left-[anchor(left)] right-[anchor(right)] rounded-md border border-gray-100 bg-light p-1 text-sm"
+    class="[position-try-fallbacks:flip-block] popover-transition mt-2 min-w-32 top-[anchor(bottom)] left-[anchor(left)] right-[anchor(right)] rounded-md border border-gray-100 bg-light p-1 text-sm"
     style={`position-anchor: ${anchorName}`}
 >
     {options.map((option) => (
