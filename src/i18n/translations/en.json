@@ -18,6 +18,29 @@
             "description": "Keep your books and board games organized. Know what’s on your shelves, plan your next one, and say goodbye to spreadsheets.",
             "questions": "Any questions?",
             "discover": "Explore"
+        },
+        "features": {
+            "title": "Your collection, with superpowers",
+            "track": {
+                "title": "Track your collection",
+                "description": "Manage your books and board games, and always keep track of them."
+            },
+            "organize": {
+                "title": "Organize your way",
+                "description": "Add items to your collection and tag them to keep everything organized."
+            },
+            "scanner": {
+                "title": "Add a book in seconds",
+                "description": "Scan the barcode, check the details, save. That’s it."
+            },
+            "wishlist": {
+                "title": "Build your wishlist",
+                "description": "Keep the books and games you want in one list, so you never miss one."
+            },
+            "langs": {
+                "title": "Speaks your language",
+                "description": "Available in English and French. Switch anytime."
+            }
         }
     },
     "lang": {

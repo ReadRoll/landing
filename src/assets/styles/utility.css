@@ -22,7 +22,7 @@
 }
 
 @utility page-container {
-    @apply mx-auto w-full max-w-[83rem] px-2 md:px-6;
+    @apply mx-auto w-full max-w-[83rem] px-4 md:px-6;
 }
 
 @utility popover-transition {
