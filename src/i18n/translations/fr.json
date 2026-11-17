@@ -8,6 +8,11 @@
             "faq": "FAQ",
             "lang": "Langues",
             "sign_in": "Se connecter"
+        },
+        "footer": {
+            "tagline": "Vos livres. Vos jeux. Enfin bien rangés.",
+            "legal": "Informations légales",
+            "sitemap": "Plan du site"
         }
     },
     "landing": {
