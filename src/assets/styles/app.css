@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@import "theme.css";
+@import "utility.css";
+
+body {
+    color: var(--color-dark);
+    overflow-x: clip;
+}
