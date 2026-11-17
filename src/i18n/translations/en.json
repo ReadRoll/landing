@@ -10,7 +10,8 @@
             "sign_in": "Log in"
         },
         "footer": {
-            "legal": "Legal mentions",
+            "tagline": "Read it. Play it. Track it.",
+            "legal": "Legal",
             "sitemap": "Sitemap"
         }
     },
