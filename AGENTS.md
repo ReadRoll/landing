@@ -23,7 +23,7 @@ Landing page for ReadRoll, live at https://readroll.xyz. Static Astro site.
 - Run the dev server in the background: `pnpm astro dev --background`; manage it with `pnpm astro dev stop|status|logs`.
 - Before Astro work, consult the relevant guide: [routing](https://docs.astro.build/en/guides/routing/), [components](https://docs.astro.build/en/basics/astro-components/), [styling](https://docs.astro.build/en/guides/styling/), [i18n](https://docs.astro.build/en/guides/internationalization/).
 - [tailwind](https://tailwindcss.com/docs/theme)
-- Tailwind CSS 4, configured CSS-first in `src/assets/app.css` (no `tailwind.config.js`).
+- Tailwind CSS 4, configured CSS-first (no `tailwind.config.js`): `src/assets/styles/app.css` imports one file per concern (theme, utility); add new rules to the matching file.
 
 ## Code style
 
