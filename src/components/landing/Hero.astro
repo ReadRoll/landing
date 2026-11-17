@@ -1,0 +1,47 @@
+---
+import Button from "@/components/ui/action/Button.astro";
+import QuestionIcon from "@/assets/icons/question.svg";
+import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import { sectionIds } from "@/components/landing/sections";
+
+const { t } = Astro.locals;
+const hero = t.landing.hero;
+
+const featuresHref = `#${sectionIds.features}`;
+const faqHref = `#${sectionIds.faq}`;
+---
+
+<section class="hero relative isolate min-h-[70dvh] flex flex-col justify-center">
+    <div class="max-w-[40rem]">
+        <h1 class="flex flex-col text-2xl md:text-[3rem] font-normal [&_strong]:text-primary [&_strong]:font-normal pb-6">
+            <span set:html={hero.title} />
+            <span>{hero.subtitle}</span>
+        </h1>
+
+        <p class="text-sm md:text-base pb-8">{hero.description}</p>
+
+        <div class="flex flex-col xs:flex-row gap-3">
+            <Button href={faqHref} variant="light">
+                <QuestionIcon slot="icon" />
+                {hero.questions}
+            </Button>
+
+            <Button href={featuresHref} variant="primary">
+                <ArrowUpRightIcon slot="icon" />
+                {hero.discover}
+            </Button>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset-block: 0;
+        inset-inline: calc((100% - 100vw) / 2);
+        z-index: -1;
+        background: url("@/assets/background/background.svg") right / contain no-repeat;
+        opacity: 0.4;
+    }
+</style>

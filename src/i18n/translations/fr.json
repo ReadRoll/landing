@@ -13,7 +13,11 @@
     "landing": {
         "page_title": "ReadRoll – Vos livres et jeux de société, bien rangés",
         "hero": {
-            "title": "ReadRoll fr"
+            "title": "Vos <strong>livres</strong>. Vos <strong>jeux</strong>.",
+            "subtitle": "Enfin bien rangés.",
+            "description": "Retrouvez ce qui dort sur vos étagères, préparez vos prochains achats et laissez tomber les tableurs.",
+            "questions": "Des questions ?",
+            "discover": "Découvrer"
         }
     },
     "lang": {

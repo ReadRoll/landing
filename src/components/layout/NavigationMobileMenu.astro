@@ -54,6 +54,7 @@ const closeIconClasses = [toggleIconClasses, "opacity-0 -rotate-90 menu-open:opa
     const initEvents = () => {
         const menu = document.getElementById("mobile-menu");
         if (!menu) return;
+
         const menuLinks = menu.querySelectorAll<HTMLAnchorElement>("a");
         menuLinks.forEach((link) =>
             link.addEventListener("click", () => {

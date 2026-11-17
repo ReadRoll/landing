@@ -13,7 +13,11 @@
     "landing": {
         "page_title": "ReadRoll – Your books and board games, organized",
         "hero": {
-            "title": "ReadRoll en"
+            "title": "<strong>Read</strong> it. <strong>Play</strong> it. <strong>Track</strong> it.",
+            "subtitle": "For readers and players.",
+            "description": "Keep your books and board games organized. Know what’s on your shelves, plan your next one, and say goodbye to spreadsheets.",
+            "questions": "Any questions?",
+            "discover": "Explore"
         }
     },
     "lang": {

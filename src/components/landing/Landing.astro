@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Navigation from "@/components/layout/Navigation.astro";
+import Hero from "./Hero.astro";
 
 const { t } = Astro.locals;
 const metaTitle = t.landing.page_title;
@@ -10,6 +11,8 @@ const routeName = "home";
 <Layout title={metaTitle} route={routeName} withSiteName={false}>
     <div class="page-container pt-4">
         <Navigation route={routeName} />
-        <main></main>
+        <main>
+            <Hero />
+        </main>
     </div>
 </Layout>
