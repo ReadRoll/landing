@@ -1,0 +1,30 @@
+---
+import FooterLinkGroup from "./FooterLinkGroup.astro";
+import LangMenu from "./LangMenu.astro";
+import { getNavigationLinks } from "./navigationLinks";
+import SignInButton from "./SignInButton.astro";
+
+const { t, paths } = Astro.locals;
+
+const legalLinks = [
+    { label: t.legal.legal_mention_title, href: paths.legal, target: "_blank" },
+    { label: t.legal.privacy_title, href: paths.privacy, target: "_blank" },
+    { label: t.legal.terms_title, href: paths.terms, target: "_blank" },
+];
+const navigationLinks = getNavigationLinks(Astro.locals);
+---
+
+<footer class="w-full bg-secondary py-16 px-7 mt-6">
+    <div class="page-container grid grid-cols-2 gap-10 lg:grid-cols-4">
+        <div class="col-span-2 flex flex-col lg:col-span-1">
+            <h2 class="text-2xl text-light">ReadRoll.</h2>
+            <small class="text-light text-sm">Read it. Play it. Track it.</small>
+        </div>
+        <FooterLinkGroup title={t.site.footer.legal} links={legalLinks} />
+        <FooterLinkGroup title={t.site.footer.sitemap} links={navigationLinks} />
+        <div class="col-span-2 flex md:flex-col gap-3 lg:col-span-1 lg:justify-self-end *:flex-1">
+            <SignInButton variant="light" />
+            <LangMenu id="footer-language-menu" variant="light-outline" />
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,23 @@
+---
+import NavigationLink from "@/components/ui/navigation/NavigationLink.astro";
+import type { HTMLAttributes } from "astro/types";
+
+type Props = {
+    title: string;
+    links: { label: string; href: string; target?: HTMLAttributes<"a">["target"] }[];
+};
+const { title, links } = Astro.props;
+---
+
+<nav aria-label={title} class="flex flex-col gap-5">
+    <h2 class="font-text text-xs uppercase text-light">{title}</h2>
+    <ul class="flex flex-col gap-2 text-sm">
+        {links.map(({ label, href, target }) => (
+            <li>
+                <NavigationLink href={href} variant="light" target={target}>
+                    {label}
+                </NavigationLink>
+            </li>
+        ))}
+    </ul>
+</nav>

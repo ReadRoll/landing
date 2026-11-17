@@ -1,11 +1,15 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 
-type Props = { href: string } & HTMLAttributes<"a">;
+type Props = { href: string; variant?: "dark" | "light" } & HTMLAttributes<"a">;
 
-const { class: className, ...props } = Astro.props;
+const { variant = "dark", class: className, ...props } = Astro.props;
 
-const classes = ["transition hover:text-primary", className];
+const variantClassMapper = {
+    dark: "hover:text-primary focus-visible:text-primary",
+    light: "text-light/70 hover:text-light focus-visible:text-light",
+};
+const classes = ["transition", variantClassMapper[variant], className];
 ---
 
 <a class:list={classes} {...props}>
