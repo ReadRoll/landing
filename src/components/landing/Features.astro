@@ -1,0 +1,30 @@
+---
+import CardIcon from "@/components/ui/content/CardIcon.astro";
+import { sectionIds } from "@/components/landing/sections";
+import ScannerIcon from "@/assets/icons/scanner.svg";
+import OrganizeIcon from "@/assets/icons/organize.svg";
+import TrackingIcon from "@/assets/icons/tracking.svg";
+import WishlistIcon from "@/assets/icons/wishlist.svg";
+import LangIcon from "@/assets/icons/lang.svg";
+
+const { t } = Astro.locals;
+const features = t.landing.features;
+
+const featureCards = [
+    { icon: TrackingIcon, ...features.track },
+    { icon: OrganizeIcon, ...features.organize },
+    { icon: ScannerIcon, ...features.scanner },
+    { icon: WishlistIcon, ...features.wishlist },
+    { icon: LangIcon, ...features.langs },
+];
+---
+
+<section id={sectionIds.features} class="grid gap-6 items-center md:grid-cols-2 xl:grid-cols-3 py-6 xl:py-20">
+    <h2 class="text-2xl xl:col-start-2 xl:row-start-1 md:text-center">{features.title}</h2>
+
+    {featureCards.map(({ icon: Icon, title, description }) => (
+        <CardIcon title={title} description={description}>
+            <Icon slot="icon" />
+        </CardIcon>
+    ))}
+</section>

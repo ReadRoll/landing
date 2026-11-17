@@ -18,6 +18,29 @@
             "description": "Retrouvez ce qui dort sur vos étagères, préparez vos prochains achats et laissez tomber les tableurs.",
             "questions": "Des questions ?",
             "discover": "Découvrer"
+        },
+        "features": {
+            "title": "Votre collection, avec des super-pouvoirs",
+            "track": {
+                "title": "Suivez votre collection",
+                "description": "Gérez vos livres et jeux de société, et gardez-en toujours la trace."
+            },
+            "organize": {
+                "title": "Rangez à votre façon",
+                "description": "Ajoutez vos livres et jeux, puis étiquetez-les pour que tout reste bien rangé."
+            },
+            "scanner": {
+                "title": "Ajoutez un livre en quelques secondes",
+                "description": "Scannez le code-barres, vérifiez les infos, enregistrez. C’est tout."
+            },
+            "wishlist": {
+                "title": "Créez votre liste d’envies",
+                "description": "Rassemblez les livres et jeux qui vous font envie dans une seule liste, pour n’en manquer aucun."
+            },
+            "langs": {
+                "title": "Parle votre langue",
+                "description": "Disponible en français et en anglais. Changez de langue à tout moment."
+            }
         }
     },
     "lang": {
