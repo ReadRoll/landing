@@ -1,0 +1,42 @@
+---
+import type { Changelog, ChangelogType } from "@/lib/changelogs/changelogTypes";
+import { render } from "astro:content";
+import Badge from "@/components/ui/content/Badge.astro";
+import { formatChangelogDate } from "@/lib/changelogs/changelogFormatter";
+import type { ComponentProps } from "astro/types";
+
+const { locale, t } = Astro.locals;
+
+// Props
+type Props = { entry: Changelog };
+const { entry } = Astro.props;
+
+// Content
+const { Content } = await render(entry);
+const { type, title, date } = entry.data;
+const formattedDate = formatChangelogDate(date, locale);
+
+// Badge
+const badgeVariants = {
+    feature: "primary",
+    security: "dark",
+    improvement: "secondary",
+    information: "secondary-outline",
+} satisfies Record<ChangelogType, ComponentProps<typeof Badge>["variant"]>;
+---
+
+<article class="snake-border rounded-2xl flex flex-col gap-6 h-full p-6">
+    <div class="flex flex-col gap-2">
+        <h3 class="text-md">{title}</h3>
+        <div class="text-sm">
+            <Content />
+        </div>
+    </div>
+
+    <div class="flex justify-between mt-auto">
+        <time datetime={date.toISOString()} class="text-sm uppercase mt-auto">
+            {formattedDate}
+        </time>
+        <Badge variant={badgeVariants[type]}>{t.changelog.types[type]}</Badge>
+    </div>
+</article>

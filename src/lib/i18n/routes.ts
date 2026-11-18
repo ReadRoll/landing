@@ -6,6 +6,7 @@ export type RouteKey = keyof typeof routes;
 
 export const routes = {
     home: { en: "/", fr: "/fr/" },
+    changelogs: { en: "/changelogs", fr: "/fr/nouveautes" },
     legal: { en: "/legal", fr: "/fr/mentions-legales" },
     privacy: { en: "/privacy", fr: "/fr/politique-confidentialite" },
     terms: { en: "/terms-of-service", fr: "/fr/conditions-utilisation" },

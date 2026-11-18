@@ -1,6 +1,6 @@
 ---
 // Props
-type Props = { variant: "primary" | "dark" | "light" | "light-outline" };
+type Props = { variant: "primary" | "dark" | "light" | "light-outline" | "secondary" | "secondary-outline" };
 const { variant } = Astro.props;
 
 const variantClassMapper = {
@@ -8,6 +8,8 @@ const variantClassMapper = {
     dark: "bg-dark text-light",
     light: "bg-light text-dark",
     "light-outline": "text-light border border-light",
+    secondary: "bg-secondary text-light",
+    "secondary-outline": "text-secondary border border-secondary",
 } satisfies Record<Props["variant"], string>;
 
 const classList = "w-fit rounded-full px-3 py-1.5 text-xs";

@@ -1,6 +1,6 @@
 {
     "changelog": {
-        "page_title": "ReadRoll – Changelog",
+        "page_title": "Changelogs",
         "types": {
             "feature": "Feature",
             "security": "Security",
@@ -22,7 +22,8 @@
             "tagline": "Read it. Play it. Track it.",
             "legal": "Legal",
             "sitemap": "Sitemap"
-        }
+        },
+        "back_home": "Back to home"
     },
     "landing": {
         "page_title": "ReadRoll – Your books and board games, organized",
@@ -91,7 +92,6 @@
         "en": "English"
     },
     "legal": {
-        "back_home": "Back to home",
         "updated_on": "Last update on",
         "legal_mention_title": "Legal notice",
         "privacy_title": "Privacy policy",

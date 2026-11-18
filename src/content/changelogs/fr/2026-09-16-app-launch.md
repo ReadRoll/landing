@@ -1,5 +1,5 @@
 ---
-type: feature
+type: information
 title: ReadRoll 1.0 est en ligne !
 date: 2026-09-16
 ---

@@ -1,0 +1,10 @@
+---
+import BackIcon from "@/assets/icons/back.svg";
+
+const { t, paths } = Astro.locals;
+---
+
+<a href={paths.home} class="group/back flex items-center gap-2 self-start text-sm text-gray-300">
+    <BackIcon class="size-3 transition-transform group-hover/back:-translate-x-0.5 group-hover/back:scale-125" aria-hidden="true" />
+    <span class="underline">{t.site.back_home}</span>
+</a>

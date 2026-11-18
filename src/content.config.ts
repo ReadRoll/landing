@@ -2,7 +2,7 @@ import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 import { defineCollection } from "astro:content";
 
-const changeLogs = defineCollection({
+const changelogs = defineCollection({
     loader: glob({ pattern: "**/*.md", base: "./src/content/changelogs" }),
     schema: z.object({
         type: z.enum(["feature", "security", "improvement", "information"]),
@@ -11,4 +11,4 @@ const changeLogs = defineCollection({
     }),
 });
 
-export const collections = { changeLogs };
+export const collections = { changelogs };
