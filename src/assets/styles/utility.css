@@ -47,3 +47,39 @@
         transition: none;
     }
 }
+
+@property --snake-angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@property --snake-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: transparent;
+}
+
+@keyframes snake {
+    to {
+        --snake-angle: 360deg;
+    }
+}
+
+@utility snake-border {
+    --snake-color: var(--color-gray-100);
+    border: 1px solid transparent;
+    background:
+        linear-gradient(var(--color-light), var(--color-light)) padding-box,
+        conic-gradient(from var(--snake-angle), var(--color-gray-100) 0 75%, var(--snake-color)) border-box;
+    animation: snake 4s linear infinite;
+    transition: --snake-color 300ms var(--default-transition-timing-function);
+
+    &:hover {
+        --snake-color: var(--color-primary);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        animation: none;
+    }
+}
