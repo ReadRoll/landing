@@ -1,0 +1,29 @@
+---
+import Button from "@/components/ui/action/Button.astro";
+import type { ComponentProps } from "astro/types";
+
+// Props
+type Props = {
+    id: string;
+    label: string;
+    variant?: ComponentProps<typeof Button>["variant"];
+};
+const { id, label, variant } = Astro.props;
+
+// Anchor
+const anchorName = `--${id}`;
+---
+
+<Button popovertarget={id} variant={variant} style={`anchor-name: ${anchorName}`}>
+    <slot name="icon" slot="icon" />
+    {label}
+</Button>
+
+<ul
+    id={id}
+    popover
+    class="[position-try-fallbacks:flip-block] popover-transition mt-2 min-w-32 top-[anchor(bottom)] left-[anchor(left)] right-[anchor(right)] rounded-md border border-gray-100 bg-light p-1 text-sm"
+    style={`position-anchor: ${anchorName}`}
+>
+    <slot />
+</ul>

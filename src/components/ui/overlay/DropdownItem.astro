@@ -1,0 +1,17 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+// Props
+type Props = HTMLAttributes<"a">;
+const { class: className, ...props } = Astro.props;
+
+// Classes
+const classList =
+    "block rounded-sm px-3 py-2 transition outline-none hover:bg-gray-100 focus-visible:bg-gray-100 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset aria-[current=page]:font-semibold aria-[current=page]:bg-gray-100/30";
+---
+
+<li>
+    <a class:list={[classList, className]} {...props}>
+        <slot />
+    </a>
+</li>
