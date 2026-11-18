@@ -1,6 +1,6 @@
 {
     "changelog": {
-        "page_title": "ReadRoll – Nouveautés",
+        "page_title": "Nouveautés",
         "types": {
             "feature": "Nouveauté",
             "security": "Sécurité",
@@ -22,7 +22,8 @@
             "tagline": "Vos livres. Vos jeux. Enfin bien rangés.",
             "legal": "Informations légales",
             "sitemap": "Plan du site"
-        }
+        },
+        "back_home": "Retour à l'accueil"
     },
     "landing": {
         "page_title": "ReadRoll – Vos livres et jeux de société, bien rangés",
@@ -91,7 +92,6 @@
         "en": "Anglais"
     },
     "legal": {
-        "back_home": "Retour à l'accueil",
         "updated_on": "Dernière mise à jour le",
         "legal_mention_title": "Mentions légales",
         "privacy_title": "Politique de confidentialité",

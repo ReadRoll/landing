@@ -83,3 +83,18 @@
         animation: none;
     }
 }
+
+@utility decorative-background {
+    position: relative;
+    isolation: isolate;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset-block: 0;
+        inset-inline: calc((100% - 100vw) / 2);
+        z-index: -1;
+        background: url("../background/background.svg") right / contain no-repeat;
+        opacity: 0.4;
+    }
+}

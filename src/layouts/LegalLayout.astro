@@ -4,6 +4,7 @@ import LegalHeader from "@/components/legal/LegalHeader.astro";
 import type { RouteKey } from "@/lib/i18n/routes";
 import ProseLink from "@/components/markdown/ProseLink.astro";
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+import Footer from "@/components/layout/Footer.astro";
 
 type Props = {
     metaTitle: string;
@@ -26,4 +27,5 @@ const mdxComponents = { a: ProseLink };
             </article>
         </div>
     </main>
+    <Footer route={route} />
 </Layout>

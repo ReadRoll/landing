@@ -16,7 +16,7 @@ type Props = {
 const { links, route } = Astro.props;
 
 // Style
-const toggleIconClasses = "size-6 transition-[opacity,rotate] duration-200 motion-reduce:transition-none";
+const toggleIconClasses = "size-6 transition-[opacity,rotate] duration-200";
 const menuIconClasses = [toggleIconClasses, "menu-open:opacity-0 menu-open:rotate-90"];
 const closeIconClasses = [toggleIconClasses, "opacity-0 -rotate-90 menu-open:opacity-100 menu-open:rotate-0"];
 ---

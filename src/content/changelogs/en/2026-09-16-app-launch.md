@@ -1,5 +1,5 @@
 ---
-type: feature
+type: information
 title: ReadRoll 1.0 is live!
 date: 2026-09-16
 ---
