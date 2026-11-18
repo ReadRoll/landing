@@ -1,6 +1,6 @@
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig, envField, fontProviders } from "astro/config";
-import { defaultLocale, locales } from "@/i18n/locales.ts";
+import { defaultLocale, locales } from "@/lib/i18n/locales.ts";
 import mdx from "@astrojs/mdx";
 
 export default defineConfig({

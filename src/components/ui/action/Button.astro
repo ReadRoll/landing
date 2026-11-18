@@ -4,8 +4,9 @@ import type { HTMLAttributes } from "astro/types";
 // Props
 type LinkProps = { href: string } & HTMLAttributes<"a">;
 type ButtonProps = { href?: never } & HTMLAttributes<"button">;
+type VariantProps = "primary" | "light" | "light-outline";
 type Props = (LinkProps | ButtonProps) & {
-    variant?: "primary" | "light" | "light-outline";
+    variant?: VariantProps;
 };
 const { variant = "light", ...props } = Astro.props;
 
@@ -19,7 +20,7 @@ const variantClassMapper = {
     primary: "bg-primary border-primary text-light hover:bg-primary-hover hover:border-primary-hover",
     light: "bg-light border-gray-100 hover:border-gray-200 hover:bg-gray-100/40",
     "light-outline": "bg-transparent border-light/30 text-light hover:bg-light/10",
-};
+} satisfies Record<VariantProps, string>;
 const classes = [classList, variantClassMapper[variant]];
 ---
 
