@@ -1,0 +1,19 @@
+---
+// Props
+type Props = { variant: "primary" | "dark" | "light" | "light-outline" };
+const { variant } = Astro.props;
+
+const variantClassMapper = {
+    primary: "bg-primary text-light",
+    dark: "bg-dark text-light",
+    light: "bg-light text-dark",
+    "light-outline": "text-light border border-light",
+} satisfies Record<Props["variant"], string>;
+
+const classList = "w-fit rounded-full px-3 py-1.5 text-xs";
+const classes = [classList, variantClassMapper[variant]];
+---
+
+<span class:list={classes}>
+    <slot />
+</span>

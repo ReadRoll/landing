@@ -1,4 +1,13 @@
 {
+    "changelog": {
+        "page_title": "ReadRoll – Nouveautés",
+        "types": {
+            "feature": "Nouveauté",
+            "security": "Sécurité",
+            "improvement": "Amélioration",
+            "information": "Information"
+        }
+    },
     "site": {
         "meta_description": "ReadRoll organise vos livres et jeux de société. Scannez les codes-barres, créez votre liste d'envies et suivez toute votre collection, sans tableur.",
         "navigation": {
@@ -46,6 +55,10 @@
                 "title": "Parle votre langue",
                 "description": "Disponible en français et en anglais. Changez de langue à tout moment."
             }
+        },
+        "changelogs": {
+            "title": "Nouveautés",
+            "view_all": "Voir tout"
         }
     },
     "lang": {

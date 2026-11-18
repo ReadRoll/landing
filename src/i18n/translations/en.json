@@ -1,4 +1,13 @@
 {
+    "changelog": {
+        "page_title": "ReadRoll – Changelog",
+        "types": {
+            "feature": "Feature",
+            "security": "Security",
+            "improvement": "Improvement",
+            "information": "Information"
+        }
+    },
     "site": {
         "meta_description": "ReadRoll keeps your books and board games organized. Scan barcodes, build your wishlist, and track your whole collection, no spreadsheet needed.",
         "navigation": {
@@ -46,6 +55,10 @@
                 "title": "Speaks your language",
                 "description": "Available in English and French. Switch anytime."
             }
+        },
+        "changelogs": {
+            "title": "Changelog",
+            "view_all": "View all"
         }
     },
     "lang": {
