@@ -59,6 +59,31 @@
         "changelogs": {
             "title": "Nouveautés",
             "view_all": "Voir tout"
+        },
+        "faq": {
+            "title": "Questions fréquentes",
+            "items": {
+                "beta": {
+                    "question": "Comment rejoindre la bêta\u00a0?",
+                    "response": "L’accès se fait uniquement sur invitation pour le moment. Écrivez-nous à {email} et nous reviendrons vers vous."
+                },
+                "suggest_feature": {
+                    "question": "Puis-je proposer une fonctionnalité\u00a0?",
+                    "response": "Vos idées nous intéressent\u00a0! Envoyez votre suggestion à {email}."
+                },
+                "price": {
+                    "question": "ReadRoll est-il gratuit\u00a0?",
+                    "response": "Oui, ReadRoll est gratuit pendant la bêta. Plus tard, nous proposerons peut-être des fonctionnalités payantes optionnelles, mais l’essentiel de l’application restera gratuit."
+                },
+                "data_privacy": {
+                    "question": "Mes données sont-elles en sécurité\u00a0?",
+                    "response": "Votre collection est privée\u00a0: vous seul pouvez la voir. Vos données sont hébergées sur des serveurs sécurisés en France et sauvegardées régulièrement. Nous ne vendons ni ne partageons jamais vos données."
+                },
+                "import": {
+                    "question": "Puis-je importer mon tableur\u00a0?",
+                    "response": "Pas encore, mais c’est prévu. En attendant, le scanner de code-barres permet d’ajouter vos livres bien plus vite."
+                }
+            }
         }
     },
     "lang": {

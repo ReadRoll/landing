@@ -59,6 +59,31 @@
         "changelogs": {
             "title": "Changelog",
             "view_all": "View all"
+        },
+        "faq": {
+            "title": "Frequently asked questions",
+            "items": {
+                "beta": {
+                    "question": "How can I join the beta?",
+                    "response": "Access is by invitation only for now. Send an email to {email} and we’ll get back to you."
+                },
+                "suggest_feature": {
+                    "question": "Can I suggest a feature?",
+                    "response": "We’d love to hear your ideas! Email {email} with your suggestion."
+                },
+                "price": {
+                    "question": "Is ReadRoll free?",
+                    "response": "Yes, ReadRoll is free during the beta. Later on, we may offer optional paid features, but the core app will stay free."
+                },
+                "data_privacy": {
+                    "question": "Is my data safe?",
+                    "response": "Your collection is private: only you can see it. Your data is stored on secure servers in France and backed up regularly. We never sell or share your data."
+                },
+                "import": {
+                    "question": "Can I import my spreadsheet?",
+                    "response": "Not yet, but it’s on our roadmap. In the meantime, the barcode scanner makes adding books much faster."
+                }
+            }
         }
     },
     "lang": {
