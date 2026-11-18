@@ -1,0 +1,25 @@
+---
+import ChevronDownIcon from "@/assets/icons/chevron-down.svg";
+
+type Props = { question: string; name?: string };
+const { question, name } = Astro.props;
+---
+
+<details
+    name={name}
+    class="group w-full
+        details-content:grid details-content:grid-rows-[0fr]
+        details-content:transition-[grid-template-rows,content-visibility] details-content:transition-discrete details-content:duration-300
+        open:details-content:grid-rows-[1fr]
+        motion-reduce:details-content:transition-none"
+>
+    <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-base/6 font-bold [&::-webkit-details-marker]:hidden">
+        {question}
+        <ChevronDownIcon class="size-6 shrink-0 transition group-open:rotate-180" aria-hidden="true" />
+    </summary>
+    <div class="min-h-0 overflow-hidden">
+        <div class="pt-3 pr-10 text-sm [&_a]:font-semibold [&_a]:underline">
+            <slot />
+        </div>
+    </div>
+</details>
