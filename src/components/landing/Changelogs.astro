@@ -1,0 +1,37 @@
+---
+import { sectionIds } from "@/components/landing/sections";
+import { getChangelogs } from "@/lib/changelogs/changelogFetcher";
+import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import ChangelogPreviewItem from "@/components/changelogs/ChangelogPreviewItem.astro";
+
+const { locale, t, paths } = Astro.locals;
+
+const changelogs = t.landing.changelogs;
+const latestChangelogs = await getChangelogs(locale, 3);
+---
+
+<section id={sectionIds.changelogs} class="changelogs isolate overflow-hidden relative bg-secondary rounded-lg p-8 lg:p-18 my-6 xl:my-20">
+    <div class="flex justify-between">
+        <h2 class="text-2xl text-light">{changelogs.title}</h2>
+        <a href={paths.home} class="hidden flex items-center gap-3 text-light underline cursor-pointer hover:*">
+            {changelogs.view_all}
+            <ArrowUpRightIcon class="size-4" aria-hidden="true" />
+        </a>
+    </div>
+    <div class="grid gap-12 lg:grid-cols-3 lg:gap-10 pt-8">
+        {latestChangelogs.map((entry) => (
+            <ChangelogPreviewItem entry={entry} />
+        ))}
+    </div>
+</section>
+
+<style>
+    .changelogs::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: url("@/assets/background/background.svg") center / cover no-repeat;
+        scale: -1 1;
+    }
+</style>
