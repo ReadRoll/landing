@@ -1,6 +1,6 @@
-import en from "@/i18n/translations/en.json";
-import fr from "@/i18n/translations/fr.json";
-import type { Locale } from "@/i18n/locales";
+import en from "@/lib/i18n/translations/en.json";
+import fr from "@/lib/i18n/translations/fr.json";
+import type { Locale } from "@/lib/i18n/locales";
 
 export type Dictionary = typeof en;
 

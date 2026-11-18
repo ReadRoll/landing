@@ -1,5 +1,5 @@
 import { getCollection, type CollectionEntry } from "astro:content";
-import type { Locale } from "@/i18n/locales";
+import type { Locale } from "@/lib/i18n/locales";
 
 const collectionName = "changeLogs";
 export type Changelog = CollectionEntry<typeof collectionName>;

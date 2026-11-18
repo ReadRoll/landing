@@ -1,7 +1,7 @@
 import { defineMiddleware } from "astro:middleware";
-import { resolveLocale } from "@/i18n/locales";
-import { getDictionary } from "@/i18n/translator";
-import { getLocalizedRoutes } from "@/i18n/routes";
+import { resolveLocale } from "@/lib/i18n/locales";
+import { getDictionary } from "@/lib/i18n/translator";
+import { getLocalizedRoutes } from "@/lib/i18n/routes";
 
 export const onRequest = defineMiddleware((context, next) => {
     const locale = resolveLocale(context.currentLocale);

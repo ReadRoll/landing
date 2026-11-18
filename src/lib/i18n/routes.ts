@@ -1,4 +1,4 @@
-import type { Locale } from "@/i18n/locales";
+import type { Locale } from "@/lib/i18n/locales";
 
 export type LocalizedRoutes = Record<RouteKey, string>;
 export type LocalizedPath = Record<Locale, string>;
