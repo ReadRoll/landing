@@ -17,9 +17,11 @@ const routeName = "home";
         <Navigation route={routeName} />
         <main>
             <Hero />
-            <Features />
-            <ChangeLogs />
-            <FAQ />
+            <div class="flex flex-col gap-20 lg:gap-40 pt-20 *:scroll-mt-10 lg:*:scroll-mt-20">
+                <Features />
+                <ChangeLogs />
+                <FAQ />
+            </div>
         </main>
     </div>
     <Footer route={routeName} />

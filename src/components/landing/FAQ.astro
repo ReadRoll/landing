@@ -13,7 +13,7 @@ const emailLink = `<a href="mailto:${contactEmail}">${contactEmail}</a>`;
 const formatResponse = (response: string) => interpolate(response, { email: emailLink });
 ---
 
-<section id={sectionIds.faq} class="flex flex-col md:flex-row justify-between gap-6 py-6 xl:py-20">
+<section id={sectionIds.faq} class="flex flex-col md:flex-row justify-between gap-6">
     <h2 class="text-2xl max-w-[22rem]">{faq.title}</h2>
 
     <div class="flex flex-col w-full lg:max-w-[35rem] divide-y divide-gray-100 *:py-5">
