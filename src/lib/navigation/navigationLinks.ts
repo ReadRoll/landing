@@ -1,4 +1,4 @@
-import { sectionIds } from "@/components/landing/sections";
+import { sectionIds } from "@/lib/navigation/landingSection";
 
 export function getNavigationLinks({ t, paths }: App.Locals) {
     return [
