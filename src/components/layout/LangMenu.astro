@@ -1,9 +1,10 @@
 ---
-import Button from "@/components/ui/action/Button.astro";
 import LangIcon from "@/assets/icons/lang.svg";
 import { routes, type RouteKey } from "@/lib/i18n/routes";
 import { locales } from "@/lib/i18n/locales";
 import type { ComponentProps } from "astro/types";
+import Dropdown from "@/components/ui/overlay/Dropdown.astro";
+import DropdownItem from "@/components/ui/overlay/DropdownItem.astro";
 
 const { locale, t } = Astro.locals;
 
@@ -11,12 +12,11 @@ const { locale, t } = Astro.locals;
 type Props = {
     id: string;
     route?: RouteKey;
-    variant?: ComponentProps<typeof Button>["variant"];
+    variant?: ComponentProps<typeof Dropdown>["variant"];
 };
 const { id, route = "home", variant } = Astro.props;
 
 // Langs
-const anchorName = `--${id}`;
 const options = locales.map((optionLocale) => ({
     locale: optionLocale,
     name: t.lang[optionLocale],
@@ -25,28 +25,11 @@ const options = locales.map((optionLocale) => ({
 }));
 ---
 
-<Button popovertarget={id} variant={variant} style={`anchor-name: ${anchorName}`}>
+<Dropdown id={id} label={t.site.navigation.lang} variant={variant}>
     <LangIcon slot="icon" />
-    {t.site.navigation.lang}
-</Button>
-
-<ul
-    id={id}
-    popover
-    class="[position-try-fallbacks:flip-block] popover-transition mt-2 min-w-32 top-[anchor(bottom)] left-[anchor(left)] right-[anchor(right)] rounded-md border border-gray-100 bg-light p-1 text-sm"
-    style={`position-anchor: ${anchorName}`}
->
     {options.map((option) => (
-        <li>
-            <a
-                class="block rounded-sm px-3 py-2 transition outline-none hover:bg-gray-100 focus-visible:bg-gray-100 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset aria-[current=page]:font-semibold aria-[current=page]:bg-gray-100/30"
-                href={option.href}
-                hreflang={option.locale}
-                lang={option.locale}
-                aria-current={option.current}
-            >
-                {option.name}
-            </a>
-        </li>
+        <DropdownItem href={option.href} hreflang={option.locale} lang={option.locale} aria-current={option.current}>
+            {option.name}
+        </DropdownItem>
     ))}
-</ul>
+</Dropdown>
