@@ -1,8 +1,8 @@
 ---
 import { sectionIds } from "@/lib/navigation/landingSection";
 import FAQItem from "@/components/ui/content/FAQItem.astro";
-import { interpolate } from "@/lib/i18n/interpolate";
 import { contactEmail } from "@/lib/contact";
+import { interpolate } from "@/lib/i18n/translator";
 
 const { t } = Astro.locals;
 const faqContent = t.landing.faq;
