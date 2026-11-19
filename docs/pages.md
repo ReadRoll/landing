@@ -23,5 +23,7 @@ Add a page to readroll.xyz in every language without duplicating its layout or c
 - Route map: the page's URL in every language.
 - Dictionaries: the page's texts in every language, including its title.
 - Page component: passes its title and route key to the layout, and its route key to the footer and navigation.
+- Dictionaries: the page's texts in every language, including its title and description.
+- Page component: passes its title, description and route key to the layout, and its route key to the footer and navigation.
 
 See the Internationalization doc for how the current language and the route map work.
