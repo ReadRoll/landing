@@ -3,19 +3,19 @@ import { getAlternateLinks } from "@/lib/i18n/meta";
 import { routes, type RouteKey } from "@/lib/i18n/routes";
 
 type Props = {
-    title: string;
+    metaTitle: string;
+    metaDescription?: string;
     withSiteName?: boolean;
     type?: "website" | "article";
     route?: RouteKey;
 };
 
-const { locale, t } = Astro.locals;
-const { title, withSiteName = true, type = "website", route } = Astro.props;
+const { locale } = Astro.locals;
+const { metaTitle, metaDescription, withSiteName = true, type = "website", route } = Astro.props;
 
 // Page
 const siteName = "ReadRoll";
-const documentTitle = withSiteName ? `${title} | ${siteName}` : title;
-const description = t.site.meta_description;
+const documentTitle = withSiteName ? `${metaTitle} | ${siteName}` : metaTitle;
 
 // Favicons
 const favicon = {
@@ -32,8 +32,8 @@ const alternateLinks = route ? getAlternateLinks(routes[route], Astro.site) : []
 const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
 const imageUrl = new URL(`/og/${locale}.png`, Astro.site).href;
 const og = {
-    title,
-    description,
+    metaTitle,
+    metaDescription,
     type,
     url: pageUrl,
     image: imageUrl,
@@ -48,7 +48,7 @@ const og = {
 
 {/* Page */}
 <title>{documentTitle}</title>
-<meta name="description" content={description} />
+<meta name="description" content={metaDescription} />
 
 {/* Favicons */}
 <link rel="apple-touch-icon" sizes="180x180" href={favicon.apple} />
@@ -62,8 +62,8 @@ const og = {
 ))}
 
 {/* Open Graph */}
-<meta property="og:title" content={og.title} />
-<meta property="og:description" content={og.description} />
+<meta property="og:title" content={og.metaTitle} />
+<meta property="og:description" content={og.metaDescription} />
 <meta property="og:type" content={og.type} />
 <meta property="og:url" content={og.url} />
 <meta property="og:image" content={og.image} />

@@ -8,11 +8,10 @@ import ChangeLogs from "@/components/landing/Changelogs.astro";
 import FAQ from "@/components/landing/FAQ.astro";
 
 const { t } = Astro.locals;
-const metaTitle = t.landing.page_title;
 const routeName = "home";
 ---
 
-<Layout title={metaTitle} route={routeName} withSiteName={false}>
+<Layout metaTitle={t.landing.page_title} metaDescription={t.landing.meta_description} route={routeName} withSiteName={false}>
     <div class="page-container pt-4">
         <Navigation route={routeName} />
         <main>

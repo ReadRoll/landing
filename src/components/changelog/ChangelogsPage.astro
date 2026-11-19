@@ -4,11 +4,10 @@ import Footer from "@/components/layout/Footer.astro";
 import ChangelogList from "./ChangelogList.astro";
 
 const { t } = Astro.locals;
-const metaTitle = t.changelog.page_title;
 const routeName = "changelogs";
 ---
 
-<Layout title={metaTitle} route={routeName}>
+<Layout metaTitle={t.changelog.page_title} metaDescription={t.changelog.meta_description} route={routeName}>
     <div class="page-container pt-20">
         <main class="min-h-[70dvh]">
             <ChangelogList />

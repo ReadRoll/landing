@@ -1,6 +1,7 @@
 {
     "changelog": {
         "page_title": "Changelogs",
+        "meta_description": "See what’s new in ReadRoll: new features, improvements and security updates.",
         "types": {
             "feature": "Feature",
             "security": "Security",
@@ -9,7 +10,6 @@
         }
     },
     "site": {
-        "meta_description": "ReadRoll keeps your books and board games organized. Scan barcodes, build your wishlist, and track your whole collection, no spreadsheet needed.",
         "navigation": {
             "menu": "Menu",
             "features": "Features",
@@ -27,6 +27,7 @@
     },
     "landing": {
         "page_title": "ReadRoll – Your books and board games, organized",
+        "meta_description": "ReadRoll keeps your books and board games organized. Scan barcodes, build your wishlist, and track your whole collection, no spreadsheet needed.",
         "hero": {
             "title": "<strong>Read</strong> it. <strong>Play</strong> it. <strong>Track</strong> it.",
             "subtitle": "For readers and players.",
@@ -95,7 +96,10 @@
         "updated_on": "Last update on",
         "legal_mention_title": "Legal notice",
         "privacy_title": "Privacy policy",
-        "terms_title": "Terms of service"
+        "terms_title": "Terms of service",
+        "legal_mention_description": "Legal notice for ReadRoll: publisher, hosting provider and contact details.",
+        "privacy_description": "How ReadRoll collects, uses and protects your personal data.",
+        "terms_description": "The terms that govern your use of ReadRoll, the app to organize and track your books and board games."
     },
     "not_found": {
         "page_title": "Page not found",

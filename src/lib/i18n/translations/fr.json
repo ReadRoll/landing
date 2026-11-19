@@ -1,6 +1,7 @@
 {
     "changelog": {
         "page_title": "Nouveautés",
+        "meta_description": "Découvrez les nouveautés de ReadRoll : nouvelles fonctionnalités, améliorations et mises à jour de sécurité",
         "types": {
             "feature": "Nouveauté",
             "security": "Sécurité",
@@ -9,7 +10,6 @@
         }
     },
     "site": {
-        "meta_description": "ReadRoll organise vos livres et jeux de société. Scannez les codes-barres, créez votre liste d'envies et suivez toute votre collection, sans tableur.",
         "navigation": {
             "menu": "Menu",
             "features": "Fonctionnalités",
@@ -27,6 +27,7 @@
     },
     "landing": {
         "page_title": "ReadRoll – Vos livres et jeux de société, bien rangés",
+        "meta_description": "ReadRoll organise vos livres et jeux de société. Scannez les codes-barres, créez votre liste d'envies et suivez toute votre collection, sans tableur.",
         "hero": {
             "title": "Vos <strong>livres</strong>. Vos <strong>jeux</strong>.",
             "subtitle": "Enfin bien rangés.",
@@ -95,7 +96,10 @@
         "updated_on": "Dernière mise à jour le",
         "legal_mention_title": "Mentions légales",
         "privacy_title": "Politique de confidentialité",
-        "terms_title": "Conditions d'utilisation"
+        "terms_title": "Conditions d'utilisation",
+        "legal_mention_description": "Mentions légales de ReadRoll : éditeur, hébergeur et coordonnées de contact.",
+        "privacy_description": "Comment ReadRoll collecte, utilise et protège vos données personnelles. Votre collection reste privée, hébergée en France, et n’est jamais vendue ni partagée.",
+        "terms_description": "Les conditions qui encadrent votre utilisation de ReadRoll, l’application pour organiser et suivre vos livres et jeux de société."
     },
     "not_found": {
         "page_title": "Page introuvable",

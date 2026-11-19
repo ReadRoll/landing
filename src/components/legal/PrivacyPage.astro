@@ -11,4 +11,4 @@ const { Content, frontmatter } = contents[locale];
 const updatedAt = new Date(frontmatter.updatedAt);
 ---
 
-<LegalLayout metaTitle={t.legal.privacy_title} route="privacy" title={frontmatter.title} updatedAt={updatedAt} content={Content} />
+<LegalLayout metaTitle={t.legal.privacy_title} metaDescription={t.legal.privacy_description} route="privacy" title={frontmatter.title} updatedAt={updatedAt} content={Content} />
