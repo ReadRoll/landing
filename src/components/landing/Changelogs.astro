@@ -6,15 +6,15 @@ import ChangelogPreviewItem from "@/components/changelog/ChangelogPreviewItem.as
 
 const { locale, t, paths } = Astro.locals;
 
-const changelogs = t.landing.changelogs;
+const changelogContent = t.landing.changelogs;
 const latestChangelogs = await getChangelogs(locale, 3);
 ---
 
 <section id={sectionIds.changelogs} class="changelogs isolate overflow-hidden relative bg-secondary rounded-lg p-8 lg:p-18">
     <div class="flex justify-between">
-        <h2 class="text-2xl text-light">{changelogs.title}</h2>
+        <h2 class="text-2xl text-light">{changelogContent.title}</h2>
         <a href={paths.changelogs} class="group/view-all flex items-center gap-3 text-light underline">
-            {changelogs.view_all}
+            {changelogContent.view_all}
             <ArrowUpRightIcon class="size-4 transition-transform group-hover/view-all:translate-x-0.5 group-hover/view-all:-translate-y-0.5" aria-hidden="true" />
         </a>
     </div>

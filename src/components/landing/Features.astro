@@ -8,19 +8,19 @@ import WishlistIcon from "@/assets/icons/wishlist.svg";
 import LangIcon from "@/assets/icons/lang.svg";
 
 const { t } = Astro.locals;
-const features = t.landing.features;
+const featureContent = t.landing.features;
 
 const featureCards = [
-    { icon: TrackingIcon, ...features.track },
-    { icon: OrganizeIcon, ...features.organize },
-    { icon: ScannerIcon, ...features.scanner },
-    { icon: WishlistIcon, ...features.wishlist },
-    { icon: LangIcon, ...features.langs },
+    { icon: TrackingIcon, ...featureContent.track },
+    { icon: OrganizeIcon, ...featureContent.organize },
+    { icon: ScannerIcon, ...featureContent.scanner },
+    { icon: WishlistIcon, ...featureContent.wishlist },
+    { icon: LangIcon, ...featureContent.langs },
 ];
 ---
 
 <section id={sectionIds.features} class="grid gap-6 items-center md:grid-cols-2 xl:grid-cols-3">
-    <h2 class="text-2xl xl:col-start-2 xl:row-start-1 md:text-center">{features.title}</h2>
+    <h2 class="text-2xl xl:col-start-2 xl:row-start-1 md:text-center">{featureContent.title}</h2>
 
     {featureCards.map(({ icon: Icon, title, description }) => (
         <CardIcon title={title} description={description}>

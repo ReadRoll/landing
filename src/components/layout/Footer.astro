@@ -6,7 +6,7 @@ import { getNavigationLinks } from "@/lib/navigation/navigationLinks";
 import SignInButton from "@/components/layout/SignInButton.astro";
 
 const { t, paths } = Astro.locals;
-const footer = t.site.footer;
+const footerContent = t.site.footer;
 
 // Props
 type Props = { route?: RouteKey };
@@ -25,10 +25,10 @@ const navigationLinks = getNavigationLinks(Astro.locals);
     <div class="page-container grid grid-cols-2 gap-10 lg:grid-cols-4">
         <div class="col-span-2 flex flex-col lg:col-span-1">
             <h2 class="text-2xl text-light">ReadRoll.</h2>
-            <small class="text-light text-sm">{footer.tagline}</small>
+            <small class="text-light text-sm">{footerContent.tagline}</small>
         </div>
-        <FooterLinkGroup title={footer.legal} links={legalLinks} />
-        <FooterLinkGroup title={footer.sitemap} links={navigationLinks} />
+        <FooterLinkGroup title={footerContent.legal} links={legalLinks} />
+        <FooterLinkGroup title={footerContent.sitemap} links={navigationLinks} />
         <div class="col-span-2 flex md:flex-col gap-3 lg:col-span-1 lg:justify-self-end *:flex-1">
             <SignInButton variant="light" />
             <LangMenu id="footer-language-menu" variant="light-outline" route={route} />

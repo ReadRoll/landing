@@ -5,8 +5,8 @@ import { interpolate } from "@/lib/i18n/interpolate";
 import { contactEmail } from "@/lib/contact";
 
 const { t } = Astro.locals;
-const faq = t.landing.faq;
-const faqList = Object.values(faq.items);
+const faqContent = t.landing.faq;
+const faqList = Object.values(faqContent.items);
 
 // Links
 const emailLink = `<a href="mailto:${contactEmail}">${contactEmail}</a>`;
@@ -14,7 +14,7 @@ const formatResponse = (response: string) => interpolate(response, { email: emai
 ---
 
 <section id={sectionIds.faq} class="flex flex-col md:flex-row justify-between gap-6">
-    <h2 class="text-2xl max-w-[22rem]">{faq.title}</h2>
+    <h2 class="text-2xl max-w-[22rem]">{faqContent.title}</h2>
 
     <div class="flex flex-col w-full lg:max-w-[35rem] divide-y divide-gray-100 *:py-5">
         {faqList.map(({ question, response }) => (
