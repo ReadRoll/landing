@@ -8,10 +8,11 @@ type Props = {
     withSiteName?: boolean;
     type?: "website" | "article";
     route?: RouteKey;
+    noindex?: boolean;
 };
 
 const { locale } = Astro.locals;
-const { metaTitle, metaDescription, withSiteName = true, type = "website", route } = Astro.props;
+const { metaTitle, metaDescription, withSiteName = true, type = "website", route, noindex = false } = Astro.props;
 
 // Page
 const siteName = "ReadRoll";
@@ -48,7 +49,8 @@ const og = {
 
 {/* Page */}
 <title>{documentTitle}</title>
-<meta name="description" content={metaDescription} />
+{metaDescription && <meta name="description" content={metaDescription} />}
+{noindex && <meta name="robots" content="noindex" />}
 
 {/* Favicons */}
 <link rel="apple-touch-icon" sizes="180x180" href={favicon.apple} />
@@ -63,7 +65,7 @@ const og = {
 
 {/* Open Graph */}
 <meta property="og:title" content={og.metaTitle} />
-<meta property="og:description" content={og.metaDescription} />
+{og.metaDescription && <meta property="og:description" content={og.metaDescription} />}
 <meta property="og:type" content={og.type} />
 <meta property="og:url" content={og.url} />
 <meta property="og:image" content={og.image} />
