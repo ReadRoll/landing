@@ -8,17 +8,18 @@ import Footer from "@/components/layout/Footer.astro";
 
 type Props = {
     metaTitle: string;
+    metaDescription: string;
     route: RouteKey;
     title: string;
     updatedAt: Date;
     content: AstroComponentFactory;
 };
 
-const { metaTitle, route, title, updatedAt, content: Content } = Astro.props;
+const { metaTitle, metaDescription, route, title, updatedAt, content: Content } = Astro.props;
 const mdxComponents = { a: ProseLink };
 ---
 
-<Layout title={metaTitle} route={route}>
+<Layout metaTitle={metaTitle} metaDescription={metaDescription} route={route}>
     <main class="min-h-dvh flex flex-col px-4 py-10">
         <div class="flex flex-col gap-8 max-w-4xl mx-auto md:mt-30">
             <LegalHeader title={title} updatedAt={updatedAt} />
