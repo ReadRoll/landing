@@ -96,5 +96,11 @@
         "legal_mention_title": "Mentions légales",
         "privacy_title": "Politique de confidentialité",
         "terms_title": "Conditions d'utilisation"
+    },
+    "not_found": {
+        "page_title": "Page introuvable",
+        "title": "Oups, vous semblez perdu !",
+        "description": "Le lien est peut-être cassé, ou la page a été déplacée.",
+        "go_back_home": "Retour à l’accueil"
     }
 }

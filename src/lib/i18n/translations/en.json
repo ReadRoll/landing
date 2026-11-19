@@ -96,5 +96,11 @@
         "legal_mention_title": "Legal notice",
         "privacy_title": "Privacy policy",
         "terms_title": "Terms of service"
+    },
+    "not_found": {
+        "page_title": "Page not found",
+        "title": "Oh you seems lost !",
+        "description": "The link may be broken, or the page may have moved.",
+        "go_back_home": "Go back to home !"
     }
 }

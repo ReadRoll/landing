@@ -1,0 +1,23 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Button from "@/components/ui/action/Button.astro";
+import CornerBackIcon from "@/assets/icons/corner-back.svg";
+
+const { t, paths } = Astro.locals;
+const content = t.not_found;
+---
+
+<Layout title={content.page_title}>
+    <main class="min-h-dvh bg-light decorative-background flex items-center justify-center">
+        <div class="flex flex-col gap-8 *:w-max">
+            <div>
+                <h1 class="text-xl font-bold pb-2">{content.title}</h1>
+                <p>{content.description}</p>
+            </div>
+            <Button variant="primary" href={paths.home}>
+                <CornerBackIcon slot="icon" />
+                {t.not_found.go_back_home}
+            </Button>
+        </div>
+    </main>
+</Layout>
